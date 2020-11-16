@@ -1,0 +1,172 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>笔记 | 第十二月夜</title><meta name="keywords" content="Note"><meta name="author" content="第十二月夜"><meta name="copyright" content="第十二月夜"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="qs笔记记录一下参数转换的一些方法方便查询qs地址：https:&#x2F;&#x2F;www.npmjs.com&#x2F;package&#x2F;qs安装：npm i qs ####qs.parse（以后再写） ####qs.stringify let obj &#x3D; &amp;#123; a: &#39;b&#39; &amp;#125;qs.stringify(obj), &#39;a&#x3D;b&#39;let obj1 &amp;#x3D">
+<meta property="og:type" content="article">
+<meta property="og:title" content="笔记">
+<meta property="og:url" content="https://yzp-666.github.io/2020/11/11/qsNote/">
+<meta property="og:site_name" content="第十二月夜">
+<meta property="og:description" content="qs笔记记录一下参数转换的一些方法方便查询qs地址：https:&#x2F;&#x2F;www.npmjs.com&#x2F;package&#x2F;qs安装：npm i qs ####qs.parse（以后再写） ####qs.stringify let obj &#x3D; &amp;#123; a: &#39;b&#39; &amp;#125;qs.stringify(obj), &#39;a&#x3D;b&#39;let obj1 &amp;#x3D">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yzp-666.github.io/articleCover/ana.png">
+<meta property="article:published_time" content="2020-11-11T08:00:36.000Z">
+<meta property="article:modified_time" content="2020-11-16T06:42:35.177Z">
+<meta property="article:author" content="第十二月夜">
+<meta property="article:tag" content="Note">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yzp-666.github.io/articleCover/ana.png"><link rel="shortcut icon" href="/img/hexo.png"><link rel="canonical" href="https://yzp-666.github.io/2020/11/11/qsNote/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: 第十二月夜","link":"链接: ","source":"来源: 第十二月夜","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2020-11-16 14:42:35'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><meta name="generator" content="Hexo 5.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/hexo.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background: linear-gradient(20deg, #0062be, #925696, #cc426e, #fb0347)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">第十二月夜</a></span><span id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><h1 class="post-title">笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-11-11T08:00:36.000Z" title="发表于 2020-11-11 16:00:36">2020-11-11</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-11-16T06:42:35.177Z" title="更新于 2020-11-16 14:42:35">2020-11-16</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h3 id="qs笔记"><a href="#qs笔记" class="headerlink" title="qs笔记"></a>qs笔记</h3><p>记录一下参数转换的一些方法方便查询<br>qs地址：<a target="_blank" rel="noopener" href="https://www.npmjs.com/package/qs">https://www.npmjs.com/package/qs</a><br>安装：npm i qs</p>
+<p>####qs.parse<br>（以后再写）</p>
+<p>####qs.stringify</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">let obj &#x3D; &#123; a: &#39;b&#39; &#125;</span><br><span class="line">qs.stringify(obj), &#39;a&#x3D;b&#39;</span><br><span class="line"></span><br><span class="line">let obj1 &#x3D; &#123; a: &#123; b: &#39;c&#39; &#125;&#125;</span><br><span class="line">qs.stringify(obj1), &#39;a%5Bb%5D&#x3D;c&#39;</span><br><span class="line">&#x2F;&#x2F; &#123; encode: false &#125; 禁用 &quot;&#123;&#125;&quot; 编码：</span><br><span class="line">qs.stringify(obj1, encode: false), &#39;a[b]&#x3D;c&#39;</span><br><span class="line"></span><br><span class="line">var obj2 &#x3D; &#123; a: &#39;b&#39;, c: [&#39;d&#39;, &#39;e&#x3D;f&#39;], f: [[&#39;g&#39;], [&#39;h&#39;]] &#125;</span><br><span class="line">qs.stringify(obj2), &#39;a&#x3D;b&amp;c%5B0%5D&#x3D;d&amp;c%5B1%5D&#x3D;e%3Df&amp;f%5B0%5D%5B0%5D&#x3D;g&amp;f%5B1%5D%5B0%5D&#x3D;h&#39;</span><br><span class="line">&#x2F;&#x2F; 设置&#123; encodeValuesOnly: true &#125; 禁用 key 编码</span><br><span class="line">qs.stringify(obj2, &#123; encodeValuesOnly: true &#125;), &#39;a&#x3D;b&amp;c[0]&#x3D;d&amp;c[1]&#x3D;e%3Df&amp;f[0][0]&#x3D;g&amp;f[1][0]&#x3D;h&#39;</span><br></pre></td></tr></table></figure>
+<h6 id="encoder自定义编码方法"><a href="#encoder自定义编码方法" class="headerlink" title="encoder自定义编码方法"></a>encoder自定义编码方法</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var encoded &#x3D; qs.stringify(&#123; a: &#123; b: &#39;c&#39; &#125; &#125;, &#123; encoder: function (str, defaultEncoder, charset, type) &#123;</span><br><span class="line">  if (type &#x3D;&#x3D;&#x3D; &#39;key&#39;) &#123;</span><br><span class="line">    return str &#x2F;&#x2F; 返回 key</span><br><span class="line">  &#125; else if (type &#x3D;&#x3D;&#x3D; &#39;value&#39;) &#123;</span><br><span class="line">    return str &#x2F;&#x2F; 返回 value</span><br><span class="line">  &#125;</span><br><span class="line">&#125;&#125;)</span><br><span class="line">  console.log(encoded), &#39;a[b]&#x3D;c&#39;</span><br><span class="line"></span><br><span class="line">同理 自定义解码 decoder</span><br><span class="line">var decoded &#x3D; qs.parse(&#39;a[b]&#x3D;c&#39;, &#123; decoder: function (str, defaultEncoder, charset, type) &#123;</span><br><span class="line">  if (type &#x3D;&#x3D;&#x3D; &#39;key&#39;) &#123;</span><br><span class="line">    return str</span><br><span class="line">  &#125; else if (type &#x3D;&#x3D;&#x3D; &#39;value&#39;) &#123;</span><br><span class="line">    return str</span><br><span class="line">  &#125;</span><br><span class="line">&#125;&#125;)</span><br><span class="line">console.log(decoded), &#39;&#123; a: &#123;b: &#39;c&#39;&#125;&#125;&#39;</span><br><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line">  decoder 和 encoder方法有4个参数 （str: 值， defaultEncoder：默认的编译（翻译）方法， charset：字符格式utf-8, type: key或者value ）</span><br><span class="line">*&#x2F;</span><br></pre></td></tr></table></figure>
+
+<p>#####数组</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;对数组编译时默认显示索引</span><br><span class="line">qs.stringify(&#123; a: [&#39;b&#39;, &#39;c&#39;, &#39;d&#39;] &#125;), &#39;a[0]&#x3D;b&amp;a[1]&#x3D;c&amp;a[2]&#x3D;d&#39;</span><br><span class="line">设置 &#123; indices: false &#125;</span><br><span class="line">qs.stringify(&#123; a: [&#39;b&#39;, &#39;c&#39;, &#39;d&#39;] &#125;, &#123; indices: false &#125;), &#39;a&#x3D;b&amp;a&#x3D;c&amp;a&#x3D;d&#39;</span><br><span class="line"></span><br><span class="line">使用arrayFormat 可以指定输出格式</span><br><span class="line">qs.stringify(&#123; a: [&#39;b&#39;, &#39;c&#39;] &#125;, &#123; arrayFormat: &#39;indices&#39; &#125;) &#x2F;&#x2F; 带索引</span><br><span class="line">&#x2F;&#x2F; &#39;a[0]&#x3D;b&amp;a[1]&#x3D;c&#39;</span><br><span class="line">qs.stringify(&#123; a: [&#39;b&#39;, &#39;c&#39;] &#125;, &#123; arrayFormat: &#39;brackets&#39; &#125;) &#x2F;&#x2F; 带方括号</span><br><span class="line">&#x2F;&#x2F; &#39;a[]&#x3D;b&amp;a[]&#x3D;c&#39;</span><br><span class="line">qs.stringify(&#123; a: [&#39;b&#39;, &#39;c&#39;] &#125;, &#123; arrayFormat: &#39;repeat&#39; &#125;) &#x2F;&#x2F; 重复key</span><br><span class="line">&#x2F;&#x2F; &#39;a&#x3D;b&amp;a&#x3D;c&#39;</span><br><span class="line">qs.stringify(&#123; a: [&#39;b&#39;, &#39;c&#39;] &#125;, &#123; arrayFormat: &#39;comma&#39; &#125;) &#x2F;&#x2F; 数组逗号隔开 value</span><br><span class="line">&#x2F;&#x2F; &#39;a&#x3D;b,c&#39;</span><br></pre></td></tr></table></figure>
+
+<p>#####对象</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">qs.stringify(&#123; a: &#123; b: &#123; c: &#39;d&#39;, e: &#39;f&#39; &#125; &#125; &#125;), &#39;a[b][c]&#x3D;d&amp;a[b][e]&#x3D;f&#39;</span><br><span class="line">&#x2F;&#x2F; 设置 &#123; allowDots： true &#125; 对象属性用 &#39;.&#39;表示</span><br><span class="line">qs.stringify(&#123; a: &#123; b: &#123; c: &#39;d&#39;, e: &#39;f&#39; &#125; &#125; &#125;, &#123; allowDots: true &#125;), &#39;a.b.c&#x3D;d&amp;a.b.e&#x3D;f&#39;</span><br></pre></td></tr></table></figure>
+
+<h5 id="空值"><a href="#空值" class="headerlink" title="空值"></a>空值</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">qs.stringify(&#123; a: &#39;&#39; &#125;), &#39;a&#x3D;&#39; </span><br><span class="line">&#x2F;&#x2F; 空字符串和空置将省略该值，会保留 &#39;&#x3D;&#39;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 没有值的键例如空对象和空数组，不返回任何内容</span><br><span class="line">qs.stringify(&#123; a: [] &#125;), &#39;&#39;</span><br><span class="line">qs.stringify(&#123; a: &#123;&#125; &#125;), &#39;&#39;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 值设置为undefined将直接省略</span><br><span class="line">qs.stringify(&#123; a: null, b: undefined &#125;), &#39;a&#x3D;&#39;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h5 id="自定义编译"><a href="#自定义编译" class="headerlink" title="自定义编译"></a>自定义编译</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">qs.stringfy(&#123; a: &#39;b&#39;, c: &#39;d&#39; &#125;, &#123; addQueryPrefix: true &#125;), &#39;?a&#x3D;b&amp;c&#x3D;d&#39;</span><br><span class="line">&#x2F;&#x2F; 设置 &#123; addQueryPrefix: true &#125; 在开始添加 &#39;?&#39;</span><br><span class="line"></span><br><span class="line">qs.stringfy(&#123; a: &#39;b&#39;, c: &#39;d&#39; &#125;,&#123; delimiter: &#39;;&#39; &#125;), &#39;a&#x3D;b;c&#x3D;d&#39;</span><br><span class="line">&#x2F;&#x2F; delimiter 设置覆盖分隔符 &#39;&amp;&#39;</span><br></pre></td></tr></table></figure>
+
+<p>默认情况下，null值被视为空字符串，解析不会区分带和不带等号的参数，两者都转换为空字符串</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">qs.stringfy(&#39;a&amp;b&#x3D;&#39;),  &#39;&#123;a: &#39;&#39;, b: &#39;&#39;&#125;&#39;</span><br></pre></td></tr></table></figure>
+<p>设置strictNullHandling区分，null与空字符串</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">qs.stringify(&#123; a: null, b: &#39;&#39; &#125;, &#123; strictNullHandling: true &#125;), &#39;a&amp;b&#x3D;&#39;</span><br></pre></td></tr></table></figure>
+<p>解析时也需要设置strictNullHandling</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">qs.parse(&#39;a&amp;b&#x3D;&#39;, &#123; strictNullHandling: true &#125;), &#39;&#123; a: null, b: &#39;&#39; &#125;&#39;</span><br></pre></td></tr></table></figure>
+
+<p>serializeDate覆盖Dete对象的序列化<br>sort改变参数键值的顺序<br>具体使用参考官网</p>
+<p>以上内容均来自 qs官网 <a target="_blank" rel="noopener" href="https://www.npmjs.com/package/qs">https://www.npmjs.com/package/qs</a><br>本文取常用内容翻译自用</p>
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Note/">Note</a></div><div class="post_share"><div class="social-share" data-image="/articleCover/ana.png" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2020/11/11/ana/"><img class="next-cover" src="/articleCover/ana.png" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">奇怪语录1</div></div></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/hexo.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">第十二月夜</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/yzp-666"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/yzp-666" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:819836692@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="card-content"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#qs%E7%AC%94%E8%AE%B0"><span class="toc-number">1.</span> <span class="toc-text">qs笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#encoder%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BC%96%E7%A0%81%E6%96%B9%E6%B3%95"><span class="toc-number">1.0.0.1.</span> <span class="toc-text">encoder自定义编码方法</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%A9%BA%E5%80%BC"><span class="toc-number">1.0.1.</span> <span class="toc-text">空值</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BC%96%E8%AF%91"><span class="toc-number">1.0.2.</span> <span class="toc-text">自定义编译</span></a></li></ol></li></ol></li></ol></div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2020/11/11/qsNote/" title="笔记"><img src="/articleCover/ana.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="笔记"/></a><div class="content"><a class="title" href="/2020/11/11/qsNote/" title="笔记">笔记</a><time datetime="2020-11-11T08:00:36.000Z" title="发表于 2020-11-11 16:00:36">2020-11-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/11/ana/" title="奇怪语录1"><img src="/articleCover/ana.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="奇怪语录1"/></a><div class="content"><a class="title" href="/2020/11/11/ana/" title="奇怪语录1">奇怪语录1</a><time datetime="2020-11-11T03:14:42.000Z" title="发表于 2020-11-11 11:14:42">2020-11-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/10/HelloWord/" title="Hello Word"><img src="/articleCover/helloword.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello Word"/></a><div class="content"><a class="title" href="/2020/11/10/HelloWord/" title="Hello Word">Hello Word</a><time datetime="2020-11-10T08:35:55.000Z" title="发表于 2020-11-10 16:35:55">2020-11-10</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 By 第十二月夜</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div></body></html>
